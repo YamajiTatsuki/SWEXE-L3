@@ -1,0 +1,15 @@
+<h1>Twitter</h1>
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+<% @tweets.each do |tweets| %>
+<p>
+<%= tweets.message %>
+<%= tweets.created_at %>
+<%= link_to 'destroy', "/tweets/#{tweets.id}", method: :delete %>
+<%= link_to 'show', "/tweets/#{tweets.id}" %>
+<%= link_to 'edit', "/tweets/#{tweets.id}/edit" %>
+</p>
+<% end %>
+<p><%= link_to 'new tweet', '/tweets/new' %></p>
+

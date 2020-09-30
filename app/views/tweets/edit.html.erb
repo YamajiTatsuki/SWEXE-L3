@@ -1,0 +1,7 @@
+<h1>編集</h1>
+<%= form_for @tweet , message: {action: :update} do |f| %>
+<%= f.label :message, 'ツイート' %>
+<%= f.text_field :message %>
+<%= f.submit '投稿' %>
+<% end %>
+
