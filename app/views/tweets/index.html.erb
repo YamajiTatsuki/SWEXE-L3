@@ -6,10 +6,9 @@
 <p>
 <%= tweets.message %>
 <%= tweets.created_at %>
-<%= link_to 'destroy', "/tweets/#{tweets.id}", method: :delete %>
-<%= link_to 'show', "/tweets/#{tweets.id}" %>
-<%= link_to 'edit', "/tweets/#{tweets.id}/edit" %>
+<%= link_to 'destroy', tweet_path(tweets.id), method: :delete %>
+<%= link_to 'show', tweet_path(tweets.id) %>
+<%= link_to 'edit', edit_tweet_path(tweets.id) %>
 </p>
 <% end %>
-<p><%= link_to 'new tweet', '/tweets/new' %></p>
-
+<p><%= link_to 'new tweet', new_tweet_path %></p>
